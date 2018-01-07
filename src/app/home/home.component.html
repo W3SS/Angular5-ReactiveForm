@@ -1,0 +1,177 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+            <a class="navbar-brand brand1">Joppler</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle toggle1" type="button" id="menu1" data-toggle="dropdown">Settings
+                                <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Profile</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Employer Verification</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Settings</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Signout</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid text-center cen">
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+        </div>
+        <div class="col-sm-8 text-left">
+            <h3>Your contact details</h3>
+            <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+                <div class="form-row">
+                    <div class="form-group col-md-5 pad">
+                        <input type="text" class="form-control" [formControl]="myForm.controls['firstName']" id="first" placeholder="First Name">
+                    </div>
+                    <div class="form-group col-md-5 pad" style="margin-left:0px">
+                        <input type="text" class="form-control" [formControl]="myForm.controls['lastName']" id="last" placeholder="Last Name">
+                    </div>
+                    <div class="form-group col-md-2 pad">
+                        <img src="./assets/profile.jpg" style="height: 42px;
+                        width: 53px;
+                        float: right;
+                        border-radius: 32px;" class="img-responsive" alt="Cinque Terre" width="304" height="236">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <input type="text" class="form-control" id="street" [formControl]="myForm.controls['street']" placeholder="Street Address">
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <input type="text" class="form-control" [formControl]="myForm.controls['country']" id="country" placeholder="Country">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5 pad">
+                        <input type="text" class="form-control" [formControl]="myForm.controls['city']" id="city" placeholder="City">
+                    </div>
+                    <div class="form-group col-md-5 pad">
+                        <input type="text" class="form-control" [formControl]="myForm.controls['state']" id="state" placeholder="State">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <input type="number" class="form-control" id="phone" [formControl]="myForm.controls['phone']" placeholder="Phone No">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="comment1">Summary:</label>
+                    <textarea class="form-control" rows="5" id="comment1">Hello I am daniyal and I am full stack developer</textarea>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <label for="Title">Your employment details:</label>
+                        <input type="text" class="form-control" id="Title" [formControl]="myForm.controls['job']" placeholder="Job/Title">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <input type="text" class="form-control" id="client" [formControl]="myForm.controls['organization']" placeholder="Organization / Client">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <input type="text" class="form-control" id="country1" placeholder="Country">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5 pad">
+                        <input type="email" class="form-control" id="city1" placeholder="City">
+                    </div>
+                    <div class="form-group col-md-5 pad">
+                        <input type="password" class="form-control" id="state1" placeholder="State">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5 pad">
+                        <input type="date" class="form-control" id="start" [formControl]="myForm.controls['startDate']" placeholder="Start Date">
+                    </div>
+                    <div class="form-group col-md-5 pad">
+                        <input type="date" class="form-control" [formControl]="myForm.controls['endDate']" placeholder="End Date">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" id="comment">Specific Duties & Accomplishments</textarea>
+                </div>
+                <button class="btn btn-default">Add more employers</button>
+                <div class="dropdown">
+                    <label for="comment" style="margin-top: 17px;">Your Education details:</label><br>
+                    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Education
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">High School</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Associate Degree</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Bachlors</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Phd</a></li>
+                    </ul>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-primary" style="margin-top:10px">
+            </form>
+        </div>
+        <div class="col-sm-2 sidenav">
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" [formControl]="myForm.controls['email']" placeholder="Enter email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" [formControl]="myForm.controls['password']" placeholder="Enter password"
+                name="pwd">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" name="remember"> Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div> -->
+
+
+<!-- <table class="table" *ngIf="contactList">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let con of contactList">
+            <td>{{con['id']}}</td>
+            <td>{{con['name']}}</td>
+            <td>{{con['email']}}</td>
+            <td>{{con['address']}}</td>
+            <td>{{con['phone']['mobile']}}</td>
+        </tr>
+    </tbody>
+</table> -->
